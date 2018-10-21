@@ -4,11 +4,11 @@ import { getStore } from 'services/Store';
 import { history } from 'services/History';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
-import { App } from 'components/App/App';
+import { App } from 'components/App';
 import registerServiceWorker from 'registerServiceWorker';
 
-import 'resources/styles/Index.css';
-import 'resources/styles/Bootstrap.css';
+import 'styles/base/Index.css';
+import 'styles/external/Bootstrap.css';
 
 ReactDOM.render(
   <Provider store={getStore()}>

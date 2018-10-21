@@ -1,6 +1,6 @@
 import { StoreState } from 'services/Store';
 import { connect, Dispatch } from 'react-redux';
-import { Layout, LayoutProps, LayoutDispatch } from 'components/Layout/Layout';
+import { Layout, LayoutProps, LayoutDispatch } from 'components/Layout';
 
 export function mapStateToProps(state: StoreState): LayoutProps {
   return {

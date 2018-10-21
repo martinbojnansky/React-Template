@@ -2,7 +2,7 @@ export const validate = (response: Response) => {
     if (response.status >= 200 && response.status < 300) {
         return response;
     } else {   
-        let error = new Error('Bad request!');
+        let error = new Error('Request failed');
         throw error;
     }
 };

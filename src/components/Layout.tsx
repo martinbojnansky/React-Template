@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { Switch, Redirect, Route } from 'react-router';
 import { Routes } from 'constants/Routes';
-import { Default } from 'components/Default/Default';
+import { Default } from 'components/Default';
 import { StoreState } from 'services/Store';
 
-import './Layout.css';
+import 'styles/components/Layout.css';
 
 export interface LayoutProps {
 }

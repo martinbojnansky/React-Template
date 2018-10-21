@@ -2,7 +2,7 @@ import * as React from 'react';
 import { StoreState } from 'services/Store';
 import { Switch, Route } from 'react-router';
 import { Routes } from 'constants/Routes';
-import { AuthorizedRoute } from 'components/AuthorizedRoute/AuthorizedRoute';
+import { AuthorizedRoute } from 'components/AuthorizedRoute';
 import Layout from 'containers/Layout';
 
 export interface AppProps {
