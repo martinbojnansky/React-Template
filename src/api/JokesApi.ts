@@ -5,6 +5,6 @@ export default {
 }
 
 function getJoke() {
-    return fetch("https://api.icndb.com/jokes/random")
+    return fetch('https://api.icndb.com/jokes/random')
     .then(httpClient.validate);
 }
