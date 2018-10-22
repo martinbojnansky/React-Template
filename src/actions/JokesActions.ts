@@ -5,6 +5,7 @@ import { ActionType } from 'actions/Actions';
 
 import httpClient from 'services/HttpClient';
 import jokesApi from 'api/JokesApi';
+import { Joke } from 'models/Joke';
 
 export interface LoadJokeAction {
     type: ActionType.JOKES_LOAD_JOKE,
@@ -14,17 +15,18 @@ export interface LoadJokeAction {
 export const loadJoke: ActionCreator<ThunkAction<Promise<LoadJokeAction>, StoreState, void>> 
 = () => {
     return async (dispatch: Dispatch<StoreState>, getState: () => StoreState, params): Promise<LoadJokeAction> => {
-        let joke = "...";
+        let joke: Joke | undefined;
         
         try {
-            joke = await httpClient.parse<string>(jokesApi.getJoke());
+            joke = await httpClient.parse<Joke>(jokesApi.getJoke());
+            
         } catch(error) {
             console.log(error);
         }
 
-        return {
+        return dispatch({
             type: ActionType.JOKES_LOAD_JOKE,
-            joke: joke
-        } as LoadJokeAction;
+            joke: joke ? joke.value.joke : ""
+        } as LoadJokeAction);
     }
 };
