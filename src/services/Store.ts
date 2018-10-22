@@ -3,6 +3,17 @@ import { connectRouter, routerMiddleware } from 'connected-react-router';
 import { history } from 'services/History';
 import { reducers } from 'reducers/Reducers';
 
+export interface StoreState {
+  joke: string
+}
+
+export function initialState(): StoreState
+{
+    return ({
+        joke: "..."
+    });
+};
+
 const middleware = 
 [
   require('redux-thunk').default, 
@@ -17,13 +28,3 @@ export function getStore() {
       applyMiddleware(...middleware),
     ),
 )};
-
-export interface StoreState {
-}
-
-export function initialState(): StoreState
-{
-    return ({
-        
-    });
-};

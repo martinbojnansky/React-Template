@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Switch, Redirect, Route } from 'react-router';
 import { Routes } from 'constants/Routes';
-import { Default } from 'components/Default';
+import Default from 'containers/Default';
 import { StoreState } from 'services/Store';
 
 import 'styles/components/Layout.css';
