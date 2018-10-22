@@ -1,13 +1,13 @@
 import { ActionCreator, Dispatch } from 'react-redux';
 import { ThunkAction } from 'redux-thunk';
-import { StoreState } from 'services/Store';
+import { StoreState } from 'states/StoreState';
 import { ActionType } from 'actions/Actions';
 
 import httpClient from 'services/HttpClient';
-import jokesApi from 'api/Jokes';
+import jokesApi from 'api/JokesApi';
 
 export interface LoadJokeAction {
-    type: ActionType.DEFAULT_LOAD_JOKE,
+    type: ActionType.JOKES_LOAD_JOKE,
     joke: string
 }
 
@@ -23,7 +23,7 @@ export const loadJoke: ActionCreator<ThunkAction<Promise<LoadJokeAction>, StoreS
         }
 
         return {
-            type: ActionType.DEFAULT_LOAD_JOKE,
+            type: ActionType.JOKES_LOAD_JOKE,
             joke: joke
         } as LoadJokeAction;
     }

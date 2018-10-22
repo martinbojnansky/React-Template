@@ -1,9 +1,8 @@
-//import { combineReducers } from 'redux';
-//import { StoreState } from 'services/Store';
+import { combineReducers } from 'redux';
+import { StoreState } from 'states/StoreState';
 
-import { dfault } from './Default';
+import { jokesReducer } from './JokesReducer';
 
-export const reducers = dfault;
-// combineReducers<StoreState>({ 
-//     default: dfault
-// });
+export const reducers = combineReducers<StoreState>({ 
+    jokes: jokesReducer
+});

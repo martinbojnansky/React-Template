@@ -2,17 +2,7 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import { connectRouter, routerMiddleware } from 'connected-react-router';
 import { history } from 'services/History';
 import { reducers } from 'reducers/Reducers';
-
-export interface StoreState {
-  joke: string
-}
-
-export function initialState(): StoreState
-{
-    return ({
-        joke: "..."
-    });
-};
+import { StoreState, initialState } from 'states/StoreState';
 
 const middleware = 
 [
@@ -27,4 +17,5 @@ export function getStore() {
   compose(
       applyMiddleware(...middleware),
     ),
-)};
+  ); 
+}

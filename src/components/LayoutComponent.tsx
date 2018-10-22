@@ -1,32 +1,31 @@
 import * as React from 'react';
 import { Switch, Redirect, Route } from 'react-router';
+import { StoreState } from 'states/StoreState';
 import { Routes } from 'constants/Routes';
-import Default from 'containers/Default';
-import { StoreState } from 'services/Store';
+import JokesContainer from 'containers/JokesContainer';
 
 import 'styles/components/Layout.css';
 
-export interface LayoutProps {
+export interface LayoutComponentProps {
 }
 
-export interface LayoutDispatch {
+export interface LayoutComponentDispatch {
 }
 
-export class Layout extends React.Component<LayoutProps & LayoutDispatch, StoreState> {
+export class LayoutComponent extends React.Component<LayoutComponentProps & LayoutComponentDispatch, StoreState> {
     render() {
         return (
             <div className="layout">
                 <nav className="navbar navbar-expand-lg bg-dark text-white">               
                     <a className="navbar-brand">React Boilerplate</a>
                     <ul className="navbar-nav flex-row">
-                        <li className="nav-item">
-                        </li>                    
+                        <li className="nav-item"/>                  
                     </ul>
                 </nav>
                 <div>
                     <Switch>
-                        <Redirect exact={true} path={Routes.DEFAULT} to={Routes.TODOS} />
-                        <Route path={Routes.TODOS} component={Default} /> 
+                        <Redirect exact={true} path={Routes.DEFAULT} to={Routes.JOKES} />
+                        <Route path={Routes.JOKES} component={JokesContainer} /> 
                     </Switch>   
                 </div>
             </div>

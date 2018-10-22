@@ -13,8 +13,8 @@ const renderAuthorizedRouteComponent = (props: {}) => (Component: any) => {
     };
 };
 
-export const AuthorizedRoute = ({ component, ...rest }: any) => (
+export const AuthorizedRouteComponent = ({ component, ...rest }: any) => (
     <Route {...rest} component={renderAuthorizedRouteComponent(rest)(component)} />
 );
 
-export default AuthorizedRoute;
+export default AuthorizedRouteComponent;
