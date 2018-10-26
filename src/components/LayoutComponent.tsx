@@ -14,18 +14,13 @@ export class LayoutComponent extends React.Component<LayoutComponentProps & Layo
     render() {
         return (
             <div className="layout">
-                <nav className="navbar navbar-expand-lg bg-dark text-white">               
-                    <a className="navbar-brand">React Boilerplate</a>
-                    <ul className="navbar-nav flex-row">
-                        <li className="nav-item"/>                  
-                    </ul>
-                </nav>
-                <div>
+                <nav></nav>
+                <main>
                     <Switch>
                         <Redirect exact={true} path={Routes.DEFAULT} to={Routes.JOKES} />
                         <Route path={Routes.JOKES} component={JokesContainer} /> 
-                    </Switch>   
-                </div>
+                    </Switch> 
+                </main>
             </div>
         );
     }

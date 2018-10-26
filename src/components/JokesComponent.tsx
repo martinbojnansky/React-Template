@@ -19,13 +19,9 @@ export class JokesComponent extends React.Component<JokesComponentProps & JokesC
     render() {
         return (
             <div>
-                <p 
-                    className="m-2">
-                    {this.props.joke}
-                </p>
+                <p>{this.props.joke}</p>
                 <button 
-                    type="button" 
-                    className="btn btn-primary m-2 mb-0"
+                    type="button"
                     onClick={this.props.loadJoke}>
                     Next
                 </button>

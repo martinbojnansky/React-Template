@@ -14,13 +14,11 @@ export interface AppComponentDispatch {
 export class AppComponent extends React.Component<AppComponentProps & AppComponentDispatch, StoreState> {
   render() {
     return (
-      <div className="app">
-        <main> 
-          <Switch>
-            <Route path={Routes.LOGIN} />
-            <AuthorizedRouteComponent path={Routes.DEFAULT} component={LayoutContainer} /> 
-          </Switch>     
-        </main>
+      <div className="app"> 
+        <Switch>
+          <Route path={Routes.LOGIN} />
+          <AuthorizedRouteComponent path={Routes.DEFAULT} component={LayoutContainer} /> 
+        </Switch>
       </div>
     );
   }
