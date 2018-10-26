@@ -1,5 +1,5 @@
 {
-  "name": "pv247",
+  "name": "react-template",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,6 +11,7 @@
     "@types/redux-mock-store": "0.0.13",
     "connected-react-router": "^4.3.0",
     "jest-localstorage-mock": "^2.2.0",
+    "node-sass": "^4.9.4",
     "promise.prototype.finally": "^3.1.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",

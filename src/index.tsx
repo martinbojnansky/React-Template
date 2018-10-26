@@ -7,8 +7,7 @@ import { ConnectedRouter } from 'connected-react-router';
 import { AppComponent } from 'components/AppComponent';
 import registerServiceWorker from 'registerServiceWorker';
 
-import 'styles/base/Index.css';
-import 'styles/external/Bootstrap.css';
+import 'styles/styles.css';
 
 ReactDOM.render(
   <Provider store={getStore()}>

@@ -4,8 +4,6 @@ import { StoreState } from 'states/StoreState';
 import { Routes } from 'constants/Routes';
 import JokesContainer from 'containers/JokesContainer';
 
-import 'styles/components/Layout.css';
-
 export interface LayoutComponentProps {
 }
 
