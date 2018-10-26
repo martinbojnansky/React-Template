@@ -10,6 +10,8 @@
     "@types/react-router": "^4.0.19",
     "@types/redux-mock-store": "0.0.13",
     "connected-react-router": "^4.3.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.2",
     "jest-localstorage-mock": "^2.2.0",
     "node-sass": "^4.9.4",
     "promise.prototype.finally": "^3.1.0",
@@ -23,8 +25,8 @@
     "redux-thunk": "^2.2.0"
   },
   "scripts": {
-    "start": "react-scripts-ts start",
-    "build": "react-scripts-ts build",
+    "start": "gulp watch | react-scripts-ts start",
+    "build": "gulp sass & react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom --no-cache",
     "eject": "react-scripts-ts eject"
   },

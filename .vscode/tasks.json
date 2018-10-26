@@ -2,10 +2,9 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "compile-styles",
-            "type": "shell",
-            "command": "node-sass ${workspaceFolder}/src/styles/styles.scss ${workspaceFolder}/src/styles/styles.css",
-            "group": "build"
+            "type": "gulp",
+            "task": "watch",
+            "problemMatcher": []
         }
     ]
 }
