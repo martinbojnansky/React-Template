@@ -1,10 +1,9 @@
 import httpClient from 'services/HttpClient';
 
 export default {
-    getJoke
-}
+  getJoke
+};
 
 function getJoke() {
-    return fetch('https://api.icndb.com/jokes/random')
-    .then(httpClient.validate);
+  return fetch('https://api.icndb.com/jokes/random').then(httpClient.validate);
 }

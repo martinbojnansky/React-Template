@@ -3,13 +3,11 @@ import { connect, Dispatch } from 'react-redux';
 import { LayoutComponent, LayoutComponentProps, LayoutComponentDispatch } from 'components/LayoutComponent';
 
 export function mapStateToProps(state: StoreState): LayoutComponentProps {
-  return {
-  };
+  return {};
 }
 
 export function mapDispatchToProps(dispatch: Dispatch<StoreState>): LayoutComponentDispatch {
-  return {
-  };
+  return {};
 }
 
 export default connect(undefined, mapDispatchToProps)(LayoutComponent);

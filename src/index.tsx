@@ -11,9 +11,9 @@ import 'styles/styles.css';
 
 ReactDOM.render(
   <Provider store={getStore()}>
-      <ConnectedRouter history={history}>
-        <AppComponent />
-      </ConnectedRouter>
+    <ConnectedRouter history={history}>
+      <AppComponent />
+    </ConnectedRouter>
   </Provider>,
   document.getElementById('root') as HTMLElement
 );

@@ -1,14 +1,13 @@
-import { JokesState } from "./JokesState";
+import { JokesState } from './JokesState';
 
 export interface StoreState {
-  jokes: JokesState
+  jokes: JokesState;
 }
 
-export function initialState(): StoreState
-{
-    return ({
-        jokes: {
-          joke: "..."
-        }
-    });
-};
+export function initialState(): StoreState {
+  return {
+    jokes: {
+      joke: '...'
+    }
+  };
+}

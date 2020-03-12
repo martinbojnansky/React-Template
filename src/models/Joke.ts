@@ -1,6 +1,6 @@
 export interface Joke {
-    value: {
-        id: number;
-        joke: string;
-    }
+  value: {
+    id: number;
+    joke: string;
+  };
 }
