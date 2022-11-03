@@ -10,7 +10,7 @@
     "@types/react-router": "^4.4.5",
     "@types/redux-mock-store": "0.0.13",
     "connected-react-router": "^4.5.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-sass": "^4.0.2",
     "jest-localstorage-mock": "^2.4.0",
     "node-sass": "^4.13.1",
